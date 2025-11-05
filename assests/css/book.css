@@ -1,0 +1,94 @@
+ body {
+      font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #03122b, #0a5275);
+      min-height: 100vh;
+    }
+
+    .booking-section {
+      padding: 60px 0;
+    }
+
+    .booking-card {
+    background: rgba(255, 255, 255, 0.05);
+      color: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px  #00bcd4;
+      padding: 40px;
+      max-width: 650px;
+      margin: auto;
+      transition: 0.3s;
+    }
+h1{
+            background: linear-gradient(135deg, #0056b3, #0099cc);
+    color: rgba(225, 225, 181, 1);
+
+border-radius: 20px;
+
+width: 50%;
+position: relative;
+left: 25%;
+padding: 5px;
+}
+    .booking-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .form-control {
+      border-radius: 10px;
+          border: 1px solid rgba(0, 255, 255, 0.3);
+    background: rgb(255, 255, 255);
+
+      padding: 12px;
+    }
+
+    .btn-book {
+        border-radius: 10px;
+
+     background-color: rgb(7, 15, 43);
+
+    color: white;
+      border: none;
+      width: 100%;
+      padding: 10px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .btn-book:hover {
+    border-radius: 10px;
+
+   background-color: #00bcd4;
+      color: #07102b;
+      transform: translateY(-3px);
+      box-shadow: 0 0 15px #1ecac1;
+    }
+
+    .ticket-type {
+      font-weight: 600;
+      color: #03346e;
+    }
+
+    .header-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .header-title h1 {
+      font-weight: bolder;    }
+
+    .header-title p {
+      font-size: 14px;
+      color: #e6d5b8;
+    }
+    .wd{
+      display: flex;
+      align-items: center;
+      padding-left: 10px;
+      font-weight: bolder;
+      width: 100%;
+      height: 50px;
+      border-radius: 9px;
+      background-color: white;
+      color: rgb(149, 149, 149);
+    }
+  

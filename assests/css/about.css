@@ -1,0 +1,112 @@
+  body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #03122b, #0a5275);
+      color: #333;
+    }
+.about-section{
+    color: white;
+}
+    .section {
+    color: rgba(225, 225, 181, 1);
+      text-align: center;
+      padding: 100px 20px;
+      border-radius: 0 0 60px 60px;
+    }
+.h2{
+      color: rgba(225, 225, 181, 1);
+font-weight: bolder;
+text-decoration: underline;
+}
+    .section h1 {
+     height: 80px;
+  
+  width: 100%;
+  padding-top: 20px;
+ 
+  font-weight: bolder;
+    background: linear-gradient(135deg, #0056b3, #0099cc);
+    color: rgba(225, 225, 181, 1);
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 255, 255, 0.25);
+    }
+
+    .section p {
+      font-size: 18px;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .about-section {
+      padding: 80px 10%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 50px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .about-text {
+      flex: 1 1 450px;
+      text-align: justify;
+    }
+
+   
+
+    .about-text p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #444;
+    }
+
+    .about-img {
+      flex: 1 1 400px;
+    }
+
+    .about-img img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.495);
+    }
+
+    .attractions {
+      background: linear-gradient(135deg, #0056b3, #0099cc);
+      padding: 80px 10%;
+      text-align: center;
+      border-radius: 40px 40px 0 0;
+      box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .attractions h2 {
+
+      height: 50px;
+      padding-top: 5px;
+      border-radius: 50px;
+ background-color: rgb(7, 15, 43);
+    color: rgba(225, 225, 181, 1);
+          text-shadow: 0 0px 15px rgba(225, 225, 181, 1);
+
+      font-weight: 700;
+      margin-bottom: 40px;
+    }
+
+    .attraction-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      justify-content: center;
+    }
+
+    .attraction-gallery img {
+      width: 300px;
+      height: 250px;
+      border-radius: 20px;
+      transition: transform 0.3s ease, box-shadow 0.4s ease;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .attraction-gallery img:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    }

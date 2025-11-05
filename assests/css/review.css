@@ -1,0 +1,87 @@
+body {
+  background: linear-gradient(135deg, #03122b, #094b72);
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+}
+
+.reviews-section h1 {
+    background: linear-gradient(135deg, #0056b3, #0099cc);
+width: 100%;
+
+border-radius: 20px;
+    color: rgba(225, 225, 181, 1);
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px 0px;
+  height: 1px;
+  font-size: 30px;
+  font-weight: 900;
+}
+.reviews-section p{
+    color: white    ;
+}
+
+.review-card {
+  background: linear-gradient(135deg, #03122b, #094b72);
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.review-card:hover {
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.6);
+  opacity: 1;
+}
+
+.review-card .stars {
+  font-size: 1.3rem;
+  color: #ffb400;
+  margin-bottom: 10px;
+}
+
+.review-card p {
+  font-size: 0.95rem;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.review-card h5 {
+  color: rgba(0, 255, 255, 0.6);
+  font-weight: 600;
+}
+
+.review-form {
+  background: linear-gradient(135deg, #03122b, #094b72);
+color: rgba(225, 225, 181, 1);
+;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.6);
+}
+
+.button {
+          border-radius: 10px;
+
+     background-color: rgb(7, 15, 43);
+
+    color: white;
+      border: none;
+      width: 100%;
+      padding: 10px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+  }
+
+
+ .button:hover {
+               border-radius: 10px;
+
+   background-color: #00bcd4;
+      color: #07102b;
+      transform: translateY(-3px);
+      box-shadow: 0 0 15px #1ecac1;
+  }

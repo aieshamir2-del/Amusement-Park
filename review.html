@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Visitor Reviews - FunLand Amusement Park</title>
+  <link rel="stylesheet" href="assests/css/review.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container-fluid">
+
+ <div class="row" id="nav-bar"></div>
+
+   <div class="row" id="nav-bar-2"></div>
+
+  <section class="reviews-section py-5">
+    <div class="container-fluid">
+      <div class="text-center mb-5">
+        <h1 class="fw-bold text-white">What Our Visitors Say</h1>
+        <p class="text-muted">Your happiness is our biggest reward! Here’s what our visitors have to say about their experiences.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="review-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p>“Absolutely amazing! The roller coaster ride was thrilling, and the staff was super friendly.”</p>
+            <h5>- Usaid</h5>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="review-card">
+            <div class="stars">⭐⭐⭐⭐</div>
+            <p>“Had a great time with my family. The food court and water rides were the best part!”</p>
+            <h5>- Nizamuddin</h5>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="review-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p>“Clean, fun, and full of joy! My kids loved every moment at FunLand.”</p>
+            <h5>- Syed Hamdan</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-form mt-5">
+        <h3 class="text-center mb-4 fw-bold">Share Your Experience</h3>
+        <form id="reviewForm" class="mx-auto" style="max-width: 600px;">
+          <div class="mb-3">
+            <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+          </div>
+          <div class="mb-3">
+            <select id="rating" class="form-select" required>
+              <option value="">Select Rating</option>
+              <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
+              <option value="4">⭐⭐⭐⭐ Good</option>
+              <option value="3">⭐⭐⭐ Average</option>
+              <option value="2">⭐⭐ Poor</option>
+              <option value="1">⭐ Terrible</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <textarea id="review" class="form-control" rows="4" placeholder="Write your review..." required></textarea>
+          </div>
+          <button class="button">Submit</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <div class="row mt-5" id="footer"></div>>
+  </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="assests/js/footer (1).js"></script>
+<script src="assests/js/header (1).js"></script>
+<script src="assests/js/nav-bar.js"></script>
+  <script>
+    document.getElementById("reviewForm").addEventListener("submit", function (e) {
+      e.preventDefault(); 
+
+      const name = document.getElementById("name").value.trim();
+      const rating = document.getElementById("rating").value;
+      const review = document.getElementById("review").value.trim();
+
+      if (name === "") {
+        alert("Please enter your name.");
+        return;
+      }
+      if (rating === "") {
+        alert("Please select a rating.");
+        return;
+      }
+      if (review === "") {
+        alert("Please write your review.");
+        return;
+      }
+
+      alert("Thank you for your review, " + name + "! ⭐");
+      document.getElementById("reviewForm").reset();
+    });
+  </script>
+
+
+</body>
+</html>

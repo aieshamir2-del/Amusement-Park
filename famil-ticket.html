@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book now</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="assests/css/book.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row" id="nav-bar"></div>
+
+            <div class="row" id="nav-bar-2"></div>
+
+
+  <div class="container booking-section">
+    <div class="header-title">
+      <h1>🎟️ Book Your Ticket</h1>
+      <p>Plan your next adventure at Merciado Amusement Park!</p>
+    </div>
+
+    <div class="booking-card">
+      <form id="bookingForm">
+        <div class="mb-3">
+          <label class="form-label">Full Name</label>
+          <input type="text" id="name" class="form-control " placeholder="Enter your name" required>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Email Address</label>
+          <input type="email" id="email" class="form-control" placeholder="example@email.com" required>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label ">Phone Number</label>
+          <input type="tel" id="phone" class="form-control" placeholder="+92 300 1234567" required>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Ticket</label> <br>
+          <label class="form-label wd">Family 💲 $20 (5 Members)</label>
+          
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Number of Tickets</label>
+          <input type="number" id="tickets" class="form-control" min="1" max="10" value="1" required>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Visit Date</label>
+          <input type="date" id="date" class="form-control" required>
+        </div>
+
+        <div class="mb-4">
+          <label class="form-label">Special Requests (optional)</label>
+          <textarea class="form-control" rows="3" placeholder="Any special arrangements or notes..."></textarea>
+        </div>
+
+        <div class="text-center">
+          <button type="submit" class="btn-book">Book Now</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+        <div class="row" id="footer"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="assests/js/footer (1).js"></script>
+    <script src="assests/js/header (1).js"></script>
+    <script src="assests/js/nav-bar.js"></script>
+    
+  <script>
+    document.getElementById("bookingForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const tickets = document.getElementById("tickets").value.trim();
+      const date = document.getElementById("date").value.trim();
+
+      const namePattern = /^[A-Za-z\s]+$/; 
+      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+      const phonePattern = /^(\+92|0)?3\d{2}\s?\d{7}$/; 
+
+      if (!namePattern.test(name)) {
+        alert("❌ Please enter Letters only ).");
+        return;
+      }
+
+      if (!emailPattern.test(email)) {
+        alert("❌ Please enter a valid email address.");
+        return;
+      }
+
+      if (!phonePattern.test(phone)) {
+        alert("❌ Please enter a valid Pakistani phone number (e.g. +92 300 1234567).");
+        return;
+      }
+
+      if (tickets === "" || tickets < 1 || tickets > 10) {
+        alert("❌ Please select between 1 and 10 tickets.");
+        return;
+      }
+
+      if (date === "") {
+        alert("❌ Please select your visit date.");
+        return;
+      }
+
+      alert("🎉 Booking successful! Thank you, " + name + "!");
+      document.getElementById("bookingForm").reset();
+    });
+
+    if (localStorage.getItem("isLoggedIn") !== "true") {
+      alert("Please login or sign up before booking a ticket.");
+      window.location.href = "login.html";
+    }
+  </script>
+  <script>
+  if (localStorage.getItem("isLoggedIn") !== "true") {
+    alert("Please login or sign up before booking a ticket.");
+    window.location.href = "login.html"; }
+</script>
+</body>
+</html>

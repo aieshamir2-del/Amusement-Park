@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="assests/css/contact (1).css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="container-fluid">
+<div class="row" id="nav-bar"></div>
+  
+    <div class="row" id="nav-bar-2"></div>
+
+
+
+  
+<div class="container1">
+    <div class="left" data-aos="fade-right" data-aos-duration="1000">
+      <h2 class="h2 mt-5">Contact Info</h2>
+      <p class="add mt-5 mb-4"><span> <img src="assests/img/address.png" alt="" width="25px" class="mb-2 me-4" >Address:</span> 5 km ahead of Clifton City,</p>
+      <p class="add mt-5 mb-4"><span > <img src="assests/img/phone.png" alt="" width="25px" class="mb-2 me-4" >Let’s Talk:</span> <a href="tel:+9203001236879">+92 0300 1236879</a></p>
+      <p class="add mt-5 mb-5"><span > <img src="assests/img/mail.png" alt="" width="25px" class=" logos mb-2 me-4" >General Support:</span> <a href="mailto:contact@example.com">info@merciado.com</a></p>
+    </div>
+
+    <div class="right" data-aos="fade-left" data-aos-duration="1000">
+      <h2>Send Us A Message</h2>
+      <form id="contactForm">
+        <div class="form-group" data-aos="fade-up" data-aos-delay="100">
+          <input type="text" id="firstName" placeholder="First Name" required>
+          <input type="text" id="lastName" placeholder="Last Name" required>
+        </div>
+        <input type="email" id="email" placeholder="Email Address" required data-aos="fade-up" data-aos-delay="200">
+        <br>
+        <input type="text" id="phone" placeholder="Phone Number" required data-aos="fade-up" data-aos-delay="300">
+        <br>
+        <textarea id="message" rows="6" placeholder="Write your message here..." required data-aos="fade-up" data-aos-delay="400"></textarea>
+        <button type="submit" id="button" data-aos="zoom-in" data-aos-delay="500">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    
+    <div class="row" id="footer" data-aos="fade-up" data-aos-duration="1000"></div>
+  </div>
+</div>
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault(); 
+
+  let firstName = document.getElementById("firstName").value.trim();
+  let lastName = document.getElementById("lastName").value.trim();
+  let email = document.getElementById("email").value.trim();
+  let phone = document.getElementById("phone").value.trim();
+  let message = document.getElementById("message").value.trim();
+
+  let namePattern = /^[A-Za-z\s]+$/;
+
+  if (!namePattern.test(firstName)) {
+    alert("❌ Please enter a valid First Name (letters only).");
+    return;
+  }
+
+  if (!namePattern.test(lastName)) {
+    alert("❌ Please enter a valid Last Name (letters only).");
+    return;
+  }
+
+  let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailPattern.test(email)) {
+    alert("❌ Please enter a valid Email Address.");
+    return;
+  }
+
+  let phonePattern = /^[0-9]{10,13}$/;
+  if (!phonePattern.test(phone)) {
+    alert("❌ Please enter a valid Phone Number (10-13 digits).");
+    return;
+  }
+
+  if (message.length < 10) {
+    alert("❌ Message must be at least 10 characters long.");
+    return;
+  }
+
+  alert("✅ Form submitted successfully!");
+  document.getElementById("contactForm").reset();
+});
+</script>
+
+  <script>
+    AOS.init();
+  </script>
+     <script src="assests/js/footer (1).js"></script>
+    <script src="assests/js/header (1).js"></script>
+    <script src="assests/js/nav-bar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #07102b, #0a5275);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .container-box {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 25px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+      width: 380px;
+      color: white;
+      padding: 40px 30px;
+      transition: all 0.4s ease;
+    }
+
+    .container-box h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-weight: 700;
+      color: #1ecac1;
+    }
+
+    .form-control {
+      background-color: rgba(255, 255, 255, 0.15);
+      border: none;
+      border-radius: 10px;
+      color: white;
+    }
+
+    .form-control::placeholder {
+      color: #e0e0e0;
+    }
+
+    .btn-custom {
+    background-color: rgb(7, 15, 43);
+    color: white;
+      border: none;
+      width: 100%;
+      padding: 10px;
+      border-radius: 10px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .btn-custom:hover {
+      background-color: #00bcd4;
+      color: #07102b;
+      transform: translateY(-3px);
+      box-shadow: 0 0 15px #1ecac1;
+    }
+
+    .text-link {
+      color: #1ecac1;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .text-link:hover {
+      text-decoration: underline;
+    }
+
+    #signup-form {
+      display: none;
+    }
+
+    .fadeIn {
+      animation: fadeIn 0.6s ease;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
